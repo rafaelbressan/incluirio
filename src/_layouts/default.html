@@ -13,16 +13,32 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/style/bundle.css">
-    
+
     {% include 'meta/structured-data.html' %}
 </head>
 
 <body>
+    <!-- SVG Icon Library -->
+    <svg width="0" height="0" aria-hidden="true" style="position: absolute;">
+        <defs>
+            <g id="icon-menu">
+                <path d="M4 5h16"/>
+                <path d="M4 12h16"/>
+                <path d="M4 19h16"/>
+            </g>
+            <g id="icon-x">
+                <path d="M18 6 6 18"/>
+                <path d="m6 6 12 12"/>
+            </g>
+        </defs>
+    </svg>
+
     {% include 'header.html' %}
     <main>
         {{ content }}
     </main>
     {% include 'footer.html' %}
+
 </body>
 
 </html>

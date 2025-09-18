@@ -5,6 +5,8 @@
     background: var(--rotary-white);
     padding: 0;
     border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    z-index: 1001;
 }
 
 .header-container {
@@ -65,4 +67,93 @@
     background: transparent;
     border-color: var(--rotary-sky-blue);
     color: var(--rotary-sky-blue);
+}
+
+/* CSS-only mobile menu toggle */
+.menu-toggle-checkbox {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--rotary-sky-blue);
+    transition: fill 0.2s ease;
+}
+
+.menu-toggle:hover .menu-icon {
+    fill: var(--rotary-royal-blue);
+}
+
+/* Icon switching logic */
+.close-icon {
+    display: none;
+}
+
+.hamburger-icon {
+    display: block;
+}
+
+
+/* Mobile responsive menu at 1024px breakpoint */
+@media (max-width: 1024px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Icon switching when menu is open */
+    .menu-toggle-checkbox:checked ~ .menu-toggle .hamburger-icon {
+        display: none;
+    }
+
+    .menu-toggle-checkbox:checked ~ .menu-toggle .close-icon {
+        display: block;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 76px; /* Position below header (header height + border) */
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 76px); /* Fill remaining viewport height */
+        background: var(--rotary-white);
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 1000;
+    }
+
+    /* CSS-only toggle: when checkbox is checked, show menu */
+    .menu-toggle-checkbox:checked ~ .main-nav {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-link {
+        font-size: 1.125rem;
+        padding: 1rem 0;
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .comprar-btn {
+        padding: 0.75rem 2rem;
+        font-size: 1.125rem;
+        margin-top: 1rem;
+    }
+
 }
