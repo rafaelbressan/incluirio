@@ -31,6 +31,11 @@
     align-items: center;
 }
 
+/* Desktop: Comprar button at the end (right) */
+.comprar-btn {
+    order: 10; /* High number to ensure it's last */
+}
+
 .nav-link {
     color: var(--rotary-sky-blue);
     text-decoration: none;
@@ -154,6 +159,7 @@
         padding: 0.75rem 2rem;
         font-size: 1.125rem;
         margin-top: 1rem;
+        order: 1; /* First item on mobile */
     }
 
 }
