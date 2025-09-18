@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 @import '/style/header.css';
+@import '/style/footer.css';
+@import '/style/index.css';
 
 /* Rotary Brand Colors and Fonts */
 :root {

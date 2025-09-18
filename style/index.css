@@ -1,0 +1,189 @@
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hero Video */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 120%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    object-fit: cover;
+}
+
+/* Hero Overlay - Gradiente escuro bottom -> top */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to top,
+        var(--rotary-charcoal) 0%,
+        rgba(84, 86, 90, 0.8) 20%,
+        rgba(84, 86, 90, 0.6) 40%,
+        rgba(84, 86, 90, 0.4) 60%,
+        rgba(84, 86, 90, 0.3) 80%,
+        rgba(84, 86, 90, 0.2) 100%
+    );
+    z-index: 2;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--rotary-white);
+}
+
+.hero-container {
+    max-width: 96rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+/* Hero Typography */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: var(--rotary-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    color: var(--rotary-white);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Button - Mesmo estilo do botão COMPRAR com as modificações solicitadas */
+.hero-btn {
+    display: inline-block;
+    background: transparent;
+    color: var(--rotary-white);
+    border: 2px solid var(--rotary-white);
+    border-radius: 2rem;
+    padding: 0.75rem 3rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn:hover {
+    background: var(--rotary-white);
+    color: var(--rotary-royal-blue);
+    border-color: var(--rotary-white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 500px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .hero-btn {
+        padding: 0.625rem 2.5rem;
+        font-size: 1rem;
+    }
+    
+    .hero-container {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 400px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .hero-btn {
+        padding: 0.5rem 2rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Otimização para vídeo em dispositivos móveis */
+@media (max-width: 768px) {
+    .hero-video {
+        width: 120%;
+        height: 140%;
+    }
+}
+
+/* Fallback para dispositivos que não suportam vídeo */
+@media (prefers-reduced-motion: reduce) {
+    .hero-video {
+        display: none;
+    }
+    
+    .hero {
+        background: linear-gradient(
+            135deg,
+            var(--rotary-royal-blue) 0%,
+            var(--rotary-sky-blue) 100%
+        );
+    }
+}

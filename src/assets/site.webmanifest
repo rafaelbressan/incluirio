@@ -1,0 +1,33 @@
+{
+  "name": "Inclui Rio - Caminhada e Corrida Inclusiva",
+  "short_name": "Inclui Rio",
+  "description": "Participe da caminhada e corrida inclusiva que transforma vidas e constrói uma cidade mais acessível para todos",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/assets/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": "#17458f",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "lang": "pt-BR",
+  "categories": ["sports", "health", "lifestyle", "accessibility"]
+}
