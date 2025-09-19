@@ -15,3 +15,16 @@ title: Inclui Rio - Home
         </div>
     </div>
 </section>
+
+<section class="sponsors">
+    <div class="sponsors-container">
+        <h2 class="sponsors-title">Patrocinadores</h2>
+        <div class="sponsors-grid">
+            {% for sponsor in sponsors %}
+            <div class="sponsor-logo" data-type="{{ sponsor.type }}">
+                <img src="assets/{{ sponsor.file }}" alt="{{ sponsor.name }}">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
