@@ -1,0 +1,11 @@
+/*
+This file contains Tailwind utility classes that need to be included in the build.
+Tailwind v4 will scan this file and include these utilities.
+DO NOT DELETE - This ensures Rotary brand colors are available as utilities.
+*/
+
+.bg-rotary-white, .bg-rotary-sky-blue, .bg-transparent {}
+.text-rotary-white, .text-rotary-charcoal, .text-rotary-sky-blue, .text-rotary-royal-blue, .text-rotary-slate, .text-rotary-black {}
+.border-rotary-white, .border-rotary-sky-blue, .border-gray-200 {}
+.fill-rotary-sky-blue, .fill-rotary-royal-blue {}
+.hover\:bg-rotary-white, .hover\:text-rotary-sky-blue, .hover\:text-rotary-black, .hover\:fill-rotary-royal-blue {}

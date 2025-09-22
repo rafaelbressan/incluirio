@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Rotary Brand Colors and Fonts */
+:root {
+    /* Font stacks */
+    --font-primary: 'Open Sans', Arial, system-ui, "Segoe UI", Roboto, Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-secondary: Georgia, 'Times New Roman', Times, serif;
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    /* Rotary Colors */
+    --rotary-royal-blue: #17458f;
+    --rotary-gold: #f7a81b;
+    --rotary-azure: #0067c8;
+    --rotary-sky-blue: #019fcb;
+    --rotary-cranberry: #d41367;
+    --rotary-cardinal: #e02927;
+    --rotary-turquoise: #00adbb;
+    --rotary-orange: #ff7600;
+    --rotary-violet: #901f93;
+    --rotary-grass: #009739;
+    --rotary-powder-blue: #b9d9eb;
+    --rotary-moss: #a7aca2;
+    --rotary-lavender: #c6bcd0;
+    --rotary-taupe: #d9c89e;
+    --rotary-stone: #9ba4b4;
+    --rotary-slate: #657f99;
+    --rotary-charcoal: #54565a;
+    --rotary-pewter: #898a8d;
+    --rotary-smoke: #b1b1b1;
+    --rotary-silver: #d0cfcd;
+    --rotary-white: #ffffff;
+    --rotary-black: #000000;
+    --rotary-storm: #7a6e66;
+    --rotary-ash: #968b83;
+    --rotary-platinum: #bfb7b0;
+    --rotary-cloud: #d6d1ca;
+}
+
+html {
+    font-family: var(--font-primary);
+    background: var(--rotary-white);
+    color: var(--rotary-charcoal);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    background: var(--rotary-white);
+    color: var(--rotary-charcoal);
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+/* Complex gradient overlay for hero section */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,
+            var(--rotary-charcoal) 0%,
+            rgba(84, 86, 90, 0.8) 20%,
+            rgba(84, 86, 90, 0.6) 40%,
+            rgba(84, 86, 90, 0.4) 60%,
+            rgba(84, 86, 90, 0.3) 80%,
+            rgba(84, 86, 90, 0.2) 100%);
+    z-index: 2;
+}
+
+/* Fallback for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .hero-video {
+        display: none;
+    }
+
+    .hero {
+        background: linear-gradient(135deg,
+                var(--rotary-royal-blue) 0%,
+                var(--rotary-sky-blue) 100%);
+    }
+}

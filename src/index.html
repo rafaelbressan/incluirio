@@ -2,28 +2,28 @@
 layout: default.html
 title: Inclui Rio - Home
 ---
-<section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
+<section class="relative w-full h-[600px] overflow-hidden flex items-center justify-center md:h-[500px] sm:h-[400px]">
+    <video class="absolute top-1/2 left-1/2 w-full h-[120%] -translate-x-1/2 -translate-y-1/2 z-[1] object-cover md:w-[120%] md:h-[140%]" autoplay muted loop playsinline>
         <source src="/assets/rotary-incluirio-running-video.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <div class="hero-container">
-            <h1 class="hero-title text-4xl font-bold underline">Corra por uma causa, faça a diferença</h1>
-            <p class="hero-subtitle">Participe da caminhada e corrida inclusiva que transforma vidas e constrói uma
+    <div class="relative z-[3] w-full h-full flex items-center justify-center text-center text-rotary-white">
+        <div class="max-w-7xl px-8 mx-auto md:px-4">
+            <h1 class="text-6xl font-bold mb-6 leading-tight text-rotary-white drop-shadow-lg lg:text-5xl md:text-4xl sm:text-3xl sm:leading-tight">Corra por uma causa, faça a diferença</h1>
+            <p class="text-xl font-normal mb-10 leading-relaxed text-rotary-white max-w-[600px] mx-auto drop-shadow-md lg:text-lg md:text-base md:mb-8 md:px-4 sm:text-sm sm:leading-normal">Participe da caminhada e corrida inclusiva que transforma vidas e constrói uma
                 cidade mais acessível para todos</p>
-            <a href="#inscricao" class="hero-btn">Participar</a>
+            <a href="#inscricao" class="inline-block bg-transparent text-rotary-white border-2 border-rotary-white rounded-full px-12 py-3 text-lg font-bold uppercase hover:bg-rotary-white hover:text-rotary-black hover:-translate-y-px transition-all duration-300 shadow-lg hover:shadow-xl md:px-10 md:py-2 md:text-base sm:px-8 sm:text-sm">Participar</a>
         </div>
     </div>
 </section>
 
-<section class="sponsors">
-    <div class="sponsors-container">
-        <h2 class="sponsors-title">Patrocinadores</h2>
-        <div class="sponsors-grid">
+<section class="bg-rotary-white py-4 overflow-hidden">
+    <div class="max-w-full px-0">
+        <h2 class="text-center text-5xl font-bold text-rotary-royal-blue md:text-2xl md:mb-8">Patrocinadores</h2>
+        <div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-12 gap-x-8 justify-items-center items-center py-8 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] md:gap-8 md:gap-x-6 md:py-6 sm:grid-cols-1 sm:gap-6 sm:py-4">
             {% for sponsor in sponsors %}
-            <div class="sponsor-logo" data-type="{{ sponsor.type }}">
-                <img src="assets/{{ sponsor.file }}" alt="{{ sponsor.name }}">
+            <div class="flex items-center justify-center w-full h-[220px] opacity-75 hover:opacity-100 transition-opacity duration-300 md:h-[160px] sm:h-[200px]" data-type="{{ sponsor.type }}">
+                <img src="assets/{{ sponsor.file }}" alt="{{ sponsor.name }}" class="h-[200px] max-w-full w-auto object-contain transition-transform duration-300 md:h-[60px] sm:h-[120px]">
             </div>
             {% endfor %}
         </div>
