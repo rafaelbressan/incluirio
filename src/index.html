@@ -10,7 +10,8 @@ title: Inclui Rio - Home
     <div class="hero-content">
         <div class="hero-container">
             <h1 class="hero-title">Corra por uma causa, faça a diferença</h1>
-            <p class="hero-subtitle">Participe da caminhada e corrida inclusiva que transforma vidas e constrói uma cidade mais acessível para todos</p>
+            <p class="hero-subtitle">Participe da caminhada e corrida inclusiva que transforma vidas e constrói uma
+                cidade mais acessível para todos</p>
             <a href="#inscricao" class="hero-btn">Participar</a>
         </div>
     </div>
@@ -21,7 +22,7 @@ title: Inclui Rio - Home
         <h2 class="sponsors-title">Patrocinadores</h2>
         <div class="sponsors-grid">
             {% for sponsor in sponsors %}
-            <div class="sponsor-logo" data-type="{{ sponsor.type }}">
+            <div class="sponsor-logo{% if sponsor.gridFr > 1 %} sponsor-logo-wide{% endif %}" data-type="{{ sponsor.type }}">
                 <img src="assets/{{ sponsor.file }}" alt="{{ sponsor.name }}">
             </div>
             {% endfor %}

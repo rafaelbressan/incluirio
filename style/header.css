@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-
 .main-header {
-    background: var(--rotary-white);
     padding: 0;
+    background: var(--rotary-white);
     border-bottom: 1px solid #e0e0e0;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1001;
+    height: 76px;
 }
 
 .header-container {
@@ -33,7 +36,8 @@
 
 /* Desktop: Comprar button at the end (right) */
 .comprar-btn {
-    order: 10; /* High number to ensure it's last */
+    order: 10;
+    /* High number to ensure it's last */
 }
 
 .nav-link {
@@ -116,20 +120,22 @@
     }
 
     /* Icon switching when menu is open */
-    .menu-toggle-checkbox:checked ~ .menu-toggle .hamburger-icon {
+    .menu-toggle-checkbox:checked~.menu-toggle .hamburger-icon {
         display: none;
     }
 
-    .menu-toggle-checkbox:checked ~ .menu-toggle .close-icon {
+    .menu-toggle-checkbox:checked~.menu-toggle .close-icon {
         display: block;
     }
 
     .main-nav {
         position: fixed;
-        top: 76px; /* Position below header (header height + border) */
+        top: 76px;
+        /* Position below header (header height + border) */
         left: 0;
         width: 100vw;
-        height: calc(100vh - 76px); /* Fill remaining viewport height */
+        height: calc(100vh - 76px);
+        /* Fill remaining viewport height */
         background: var(--rotary-white);
         flex-direction: column;
         justify-content: center;
@@ -142,7 +148,7 @@
     }
 
     /* CSS-only toggle: when checkbox is checked, show menu */
-    .menu-toggle-checkbox:checked ~ .main-nav {
+    .menu-toggle-checkbox:checked~.main-nav {
         opacity: 1;
         visibility: visible;
     }
@@ -159,7 +165,8 @@
         padding: 0.75rem 2rem;
         font-size: 1.125rem;
         margin-top: 1rem;
-        order: 1; /* First item on mobile */
+        order: 1;
+        /* First item on mobile */
     }
 
 }
