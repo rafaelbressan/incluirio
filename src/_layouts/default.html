@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     {% include 'meta/seo-tags.html' %}
     {% include 'meta/social-meta.html' %}
-    
+
     <!-- Title -->
     <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
-    
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/style/bundle.css">
 
@@ -22,19 +22,20 @@
     <svg width="0" height="0" aria-hidden="true" style="position: absolute;">
         <defs>
             <g id="icon-menu">
-                <path d="M4 5h16"/>
-                <path d="M4 12h16"/>
-                <path d="M4 19h16"/>
+                <path d="M4 5h16" />
+                <path d="M4 12h16" />
+                <path d="M4 19h16" />
             </g>
             <g id="icon-x">
-                <path d="M18 6 6 18"/>
-                <path d="m6 6 12 12"/>
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
             </g>
         </defs>
     </svg>
 
     {% include 'header.html' %}
     <main>
+        <h1 class="font-bold text-5xl text-red-700">{{ title }}</h1>
         {{ content }}
     </main>
     {% include 'footer.html' %}

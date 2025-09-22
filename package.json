@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "eleventy",
     "serve": "eleventy --serve",
-    "re-serve": "rm -rf dist && npm run serve"
+    "re-serve": "rm -rf dist && npm run serve",
+    "build:css": "tailwindcss -i ./style/bundle.css -o ./dist/style/bundle.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,8 @@
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "@11ty/eleventy-img": "^6.0.4"
+    "@11ty/eleventy-img": "^6.0.4",
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13"
   }
 }
