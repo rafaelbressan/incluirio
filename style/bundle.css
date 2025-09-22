@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-700: oklch(50.5% 0.213 27.518);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --spacing: 0.25rem;
     --container-7xl: 80rem;
@@ -267,11 +266,11 @@
   .h-\[120\%\] {
     height: 120%;
   }
-  .h-\[200px\] {
-    height: 200px;
+  .h-\[280px\] {
+    height: 280px;
   }
-  .h-\[220px\] {
-    height: 220px;
+  .h-\[300px\] {
+    height: 300px;
   }
   .h-\[600px\] {
     height: 600px;
@@ -450,9 +449,6 @@
     --tw-tracking: var(--tracking-wide);
     letter-spacing: var(--tracking-wide);
   }
-  .text-red-700 {
-    color: var(--color-red-700);
-  }
   .uppercase {
     text-transform: uppercase;
   }
@@ -613,14 +609,14 @@
       }
     }
   }
-  .sm\:h-\[120px\] {
+  .sm\:h-\[220px\] {
     @media (width >= 40rem) {
-      height: 120px;
+      height: 220px;
     }
   }
-  .sm\:h-\[200px\] {
+  .sm\:h-\[250px\] {
     @media (width >= 40rem) {
-      height: 200px;
+      height: 250px;
     }
   }
   .sm\:h-\[400px\] {
@@ -677,19 +673,19 @@
       margin-bottom: calc(var(--spacing) * 8);
     }
   }
-  .md\:h-\[60px\] {
-    @media (width >= 48rem) {
-      height: 60px;
-    }
-  }
   .md\:h-\[140\%\] {
     @media (width >= 48rem) {
       height: 140%;
     }
   }
-  .md\:h-\[160px\] {
+  .md\:h-\[180px\] {
     @media (width >= 48rem) {
-      height: 160px;
+      height: 180px;
+    }
+  }
+  .md\:h-\[200px\] {
+    @media (width >= 48rem) {
+      height: 200px;
     }
   }
   .md\:h-\[500px\] {
@@ -874,7 +870,6 @@
 html {
   font-family: var(--font-primary);
   background: var(--rotary-white);
-  color: var(--rotary-charcoal);
   font-size: 1rem;
   line-height: 1.6;
   font-optical-sizing: auto;
