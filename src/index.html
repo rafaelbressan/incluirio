@@ -2,28 +2,33 @@
 layout: default.html
 title: Inclui Rio - Home
 ---
-<section class="relative w-full h-[600px] overflow-hidden flex items-center justify-center md:h-[500px] sm:h-[400px]">
-    <video class="absolute top-1/2 left-1/2 w-full h-[120%] -translate-x-1/2 -translate-y-1/2 z-[1] object-cover md:w-[120%] md:h-[140%]" autoplay muted loop playsinline>
+<section>
+    <video autoplay muted loop playsinline>
         <source src="/assets/rotary-incluirio-running-video.mp4" type="video/mp4">
     </video>
-    <div class="hero-overlay"></div>
-    <div class="relative z-[3] w-full h-full flex items-center justify-center text-center text-rotary-white">
-        <div class="max-w-7xl px-8 mx-auto md:px-4">
-            <h1 class="text-6xl font-bold mb-6 leading-tight text-rotary-white drop-shadow-lg lg:text-5xl md:text-4xl sm:text-3xl sm:leading-tight">Corra por uma causa, faça a diferença</h1>
-            <p class="text-xl font-normal mb-10 leading-relaxed text-rotary-white max-w-[600px] mx-auto drop-shadow-md lg:text-lg md:text-base md:mb-8 md:px-4 sm:text-sm sm:leading-normal">Participe da caminhada e corrida inclusiva que transforma vidas e constrói uma
+    <div></div>
+    <div>
+        <div>
+            <h1 class="text-red-600">Corra por uma causa, faça a diferença</h1>
+            <p>Participe da caminhada e corrida inclusiva que transforma vidas e constrói uma
                 cidade mais acessível para todos</p>
-            <a href="#inscricao" class="inline-block bg-transparent text-rotary-white border-2 border-rotary-white rounded-full px-12 py-3 text-lg font-bold uppercase hover:bg-rotary-white hover:text-rotary-black hover:-translate-y-px transition-all duration-300 shadow-lg hover:shadow-xl md:px-10 md:py-2 md:text-base sm:px-8 sm:text-sm">Participar</a>
+            <a href="#inscricao" class="btn btn-primary">Participar</a>
         </div>
     </div>
 </section>
 
-<section class="bg-rotary-white py-4 overflow-hidden">
-    <div class="max-w-full px-0">
-        <h2 class="text-center text-5xl font-bold text-rotary-royal-blue md:text-2xl md:mb-8">Patrocinadores</h2>
-        <div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-12 gap-x-8 justify-items-center items-center py-8 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] md:gap-8 md:gap-x-6 md:py-6 sm:grid-cols-1 sm:gap-6 sm:py-4">
+<section>
+    <div>
+        <h2>Patrocinadores</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {% for sponsor in sponsors %}
-            <div class="flex items-center justify-center w-full h-[300px] opacity-75 hover:opacity-100 transition-opacity duration-300 md:h-[200px] sm:h-[250px]" data-type="{{ sponsor.type }}">
-                <img src="assets/{{ sponsor.file }}" alt="{{ sponsor.name }}" class="h-[280px] max-w-full w-auto object-contain transition-transform duration-300 md:h-[180px] sm:h-[220px]">
+            <div class="card bg-base-100 shadow-xl" data-type="{{ sponsor.type }}">
+                <figure>
+                    <img src="assets/{{ sponsor.file }}" alt="{{ sponsor.name }}" class="w-full h-48 object-contain">
+                </figure>
+                <div class="card-body">
+                    <h3 class="card-title">{{ sponsor.name }}</h3>
+                </div>
             </div>
             {% endfor %}
         </div>

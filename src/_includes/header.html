@@ -1,35 +1,31 @@
-<header class="bg-rotary-white border-b border-gray-200 relative z-[1001]">
-    <div class="flex items-center justify-between max-w-7xl mx-auto px-8 py-3 min-h-15">
-        <a href="/" class="h-10 w-auto block">
-            <img src="assets/rotary-logo.png" alt="Rotary Logo" class="h-10 w-auto" width="108">
+<header>
+    <div>
+        <a href="/">
+            <img src="assets/rotary-logo.png" alt="Rotary Logo" width="108">
         </a>
 
         <!-- Mobile menu toggle using peer utilities -->
-        <input type="checkbox" id="menu-toggle" class="peer sr-only">
-        <label for="menu-toggle" class="lg:hidden cursor-pointer p-2 z-[1001]" aria-label="Toggle mobile menu">
-            <svg class="w-6 h-6 fill-rotary-sky-blue transition-colors duration-200 hover:fill-rotary-royal-blue peer-checked:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" aria-label="Toggle mobile menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <use href="#icon-menu"></use>
             </svg>
-            <svg class="w-6 h-6 fill-rotary-sky-blue transition-colors duration-200 hover:fill-rotary-royal-blue hidden peer-checked:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <use href="#icon-x"></use>
             </svg>
         </label>
 
-        <nav class="hidden lg:flex gap-10 items-center
-                    peer-checked:flex peer-checked:fixed peer-checked:top-[76px] peer-checked:left-0
-                    peer-checked:w-full peer-checked:h-[calc(100vh-76px)] peer-checked:bg-rotary-white
-                    peer-checked:flex-col peer-checked:justify-center peer-checked:gap-8 peer-checked:p-8
-                    peer-checked:z-[1000] transition-all duration-300 ease-in-out">
+        <nav>
 
-            <a href="#comprar" class="bg-rotary-sky-blue text-rotary-white border border-rotary-sky-blue rounded-full px-8 py-1 font-bold uppercase hover:bg-transparent hover:text-rotary-sky-blue transition-all duration-200 cursor-pointer tracking-wide order-10 lg:order-1 lg:px-8 lg:py-3 lg:text-lg lg:mt-4">Comprar</a>
+            <a href="#comprar">Comprar</a>
 
-            <a href="#sobre" class="text-rotary-sky-blue no-underline text-sm uppercase font-semibold tracking-wide py-2 hover:underline lg:text-lg lg:p-4 lg:text-center lg:w-full lg:border-b lg:border-gray-200">Sobre</a>
+            <a href="#sobre">Sobre</a>
 
-            <a href="#galeria" class="text-rotary-sky-blue no-underline text-sm uppercase font-semibold tracking-wide py-2 hover:underline lg:text-lg lg:p-4 lg:text-center lg:w-full lg:border-b lg:border-gray-200">Galeria</a>
+            <a href="#galeria">Galeria</a>
 
-            <a href="#contato" class="text-rotary-sky-blue no-underline text-sm uppercase font-semibold tracking-wide py-2 hover:underline lg:text-lg lg:p-4 lg:text-center lg:w-full lg:border-b lg:border-gray-200">Contato</a>
+            <a href="#contato">Contato</a>
 
-            <a href="#doacao" class="text-rotary-sky-blue no-underline text-sm uppercase font-semibold tracking-wide py-2 hover:underline lg:text-lg lg:p-4 lg:text-center lg:w-full lg:border-b lg:border-gray-200">Faça uma doação</a>
+            <a href="#doacao">Faça uma doação</a>
         </nav>
     </div>
 </header>
