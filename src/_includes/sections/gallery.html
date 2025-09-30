@@ -1,0 +1,12 @@
+<section class="gallery">
+    <div class="gallery-container">
+        <h2 class="gallery-title">Galeria</h2>
+        <div class="carousel" data-flickity='{"wrapAround": true, "autoPlay": true, "pauseAutoPlayOnHover": false}'>
+            {% for image in gallery %}
+            <div class="carousel-cell">
+                <img src="assets/{{ image.file }}" alt="{{ image.alt }}">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -13,6 +13,7 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/style/bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     {% include 'meta/structured-data.html' %}
 </head>
@@ -38,6 +39,24 @@
         {{ content }}
     </main>
     {% include 'footer.html' %}
+
+    <!-- Flickity JavaScript -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+        // Initialize Flickity carousel when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            var elem = document.querySelector('.carousel');
+            if (elem) {
+                var flkty = new Flickity(elem, {
+                    wrapAround: true,
+                    autoPlay: 3000,
+                    pauseAutoPlayOnHover: false,
+                    cellAlign: 'center',
+                    contain: true
+                });
+            }
+        });
+    </script>
 
 </body>
 

@@ -1,0 +1,13 @@
+<section class="sponsors">
+    <div class="sponsors-container">
+        <h2 class="sponsors-title">Patrocinadores</h2>
+        <div class="sponsors-grid">
+            {% for sponsor in sponsors %}
+            <div class="sponsor-logo{% if sponsor.gridFr > 1 %} sponsor-logo-wide{% endif %}"
+                data-type="{{ sponsor.type }}">
+                <img src="assets/{{ sponsor.file }}" alt="{{ sponsor.name }}">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

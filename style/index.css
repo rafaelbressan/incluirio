@@ -208,7 +208,7 @@
     justify-content: center;
     align-items: center;
     padding: 0.5rem 0;
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
 }
 
@@ -286,5 +286,212 @@
         flex: 0 0 auto;
         width: 100%;
         max-width: 480px;
+    }
+
+    /* Use vertical logo for fundacao on mobile */
+    .sponsor-logo img[src*="rotary-fundacaosocios.png"] {
+        content: url('/assets/rotary-fundacaosocios-vertical.png');
+        max-height: 120px;
+        width: auto;
+    }
+}
+
+/* About Event Section */
+.about-event {
+    background: var(--rotary-white);
+    padding: 4rem 0;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-image {
+    flex: 0 0 45%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--rotary-royal-blue);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--rotary-charcoal);
+    margin: 0;
+}
+
+.about-description.about-highlight {
+    color: var(--rotary-charcoal);
+    font-weight: 500;
+    padding: 1rem 0
+}
+
+.about-text .comprar-btn {
+    margin-top: 1.5rem;
+    display: inline-block;
+}
+
+/* About Event Responsive Design */
+@media (max-width: 768px) {
+    .about-event {
+        padding: 3rem 0;
+    }
+
+    .about-container {
+        padding: 0 1.5rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-image {
+        flex: none;
+        max-width: 100%;
+    }
+
+    .about-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .about-description {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .about-text .comprar-btn {
+        margin-top: 1.5rem;
+        display: inline-block;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-event {
+        padding: 2rem 0;
+    }
+
+    .about-container {
+        padding: 0 1rem;
+    }
+
+    .about-content {
+        gap: 1.5rem;
+    }
+
+    .about-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-description {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
+
+/* Gallery Section */
+.gallery {
+    background: var(--rotary-white);
+    padding: 0 0 4rem 0;
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--rotary-royal-blue);
+    margin-bottom: 3rem;
+}
+
+.carousel {
+    margin: 0 auto;
+}
+
+.carousel-cell {
+    width: 80%;
+    height: 400px;
+    margin-right: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-cell img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.carousel-cell:hover img {
+    transform: scale(1.05);
+}
+
+/* Gallery Responsive Design */
+@media (max-width: 768px) {
+    .gallery {
+        padding: 3rem 0;
+    }
+
+    .gallery-container {
+        padding: 0 1rem;
+    }
+
+    .gallery-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .carousel-cell {
+        width: 90%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        padding: 2rem 0;
+    }
+
+    .carousel-cell {
+        width: 95%;
+        height: 250px;
     }
 }
