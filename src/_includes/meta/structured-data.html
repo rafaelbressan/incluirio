@@ -7,6 +7,10 @@
     "description": "{{ site.description }}",
     "url": "{{ site.url }}",
     "image": "{{ site.url }}{{ site.ogImage }}",
+    "startDate": "2025-11-30T06:00:00-03:00",
+    "endDate": "2025-11-30T11:00:00-03:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "organizer": {
         "@type": "Organization",
         "name": "{{ site.organization.name }}",
@@ -17,9 +21,11 @@
         "name": "{{ site.location.name }}",
         "address": {
             "@type": "PostalAddress",
-            "addressLocality": "{{ site.location.city }}",
+            "streetAddress": "{{ site.location.address }}",
+            "addressLocality": "{{ site.location.neighborhood }}, {{ site.location.city }}",
             "addressRegion": "{{ site.location.state }}",
-            "addressCountry": "{{ site.location.country }}"
+            "addressCountry": "{{ site.location.country }}",
+            "postalCode": "{{ site.location.postalCode }}"
         }
     },
     "sport": "Running",
@@ -28,11 +34,33 @@
         "@type": "Audience",
         "audienceType": "General Public"
     },
+    "maximumAttendeeCapacity": {{ site.event.expectedAttendance }},
     "isAccessibleForFree": true,
     "accessibilityFeature": [
         "wheelchairAccessible",
         "signLanguageInterpretation",
         "audioDescription"
+    ],
+    "offers": [
+        {
+            "@type": "Offer",
+            "name": "Participação Livre",
+            "price": "0",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "url": "{{ site.url }}",
+            "validFrom": "2025-09-01T00:00:00-03:00",
+            "description": "Participação gratuita sem kit ou paga com kit"
+        },
+        {
+            "@type": "Offer",
+            "name": "Inscrição Completa",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "url": "{{ site.url }}",
+            "validFrom": "2025-09-01T00:00:00-03:00",
+            "description": "Inscrição com kit e medalha"
+        }
     ]
 }
 </script>

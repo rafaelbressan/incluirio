@@ -389,6 +389,23 @@
     color: var(--rotary-charcoal);
     margin-bottom: 0.75rem;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.inline-icon {
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.clock-icon {
+    color: var(--rotary-orange);
+}
+
+.pin-icon {
+    color: var(--rotary-cranberry);
 }
 
 .event-address {
