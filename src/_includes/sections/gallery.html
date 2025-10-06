@@ -1,7 +1,7 @@
-<section class="gallery">
+<section class="gallery" id="galeria">
     <div class="gallery-container">
         <h2 class="gallery-title">Galeria</h2>
-        <div class="carousel" data-flickity='{"wrapAround": true, "autoPlay": true, "pauseAutoPlayOnHover": false}'>
+        <div class="carousel">
             {% for image in gallery %}
             <div class="carousel-cell">
                 <img src="assets/{{ image.file }}" alt="{{ image.alt }}">

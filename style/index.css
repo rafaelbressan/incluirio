@@ -248,7 +248,7 @@
 
     .sponsors-grid {
         gap: 1.5rem;
-        padding: 1.5rem 0;
+        padding: 0.5rem 0;
     }
 
     .sponsor-logo {
@@ -268,7 +268,7 @@
 @media (max-width: 480px) {
     .sponsors-grid {
         flex-direction: column;
-        padding: 0.5rem 0;
+        padding: 0;
     }
 
     .sponsor-logo {
@@ -293,6 +293,187 @@
         content: url('/assets/rotary-fundacaosocios-vertical.png');
         max-height: 120px;
         width: auto;
+    }
+}
+
+/* Event Info Section */
+.event-info {
+    background: #f8f9fa;
+    padding: 4rem 0;
+}
+
+.event-info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.event-info-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--rotary-royal-blue);
+    margin-bottom: 3rem;
+}
+
+.event-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.event-card {
+    background: var(--rotary-white);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e6ed;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-icon svg {
+    transition: transform 0.3s ease;
+}
+
+.kit-card .card-icon svg {
+    color: var(--rotary-gold);
+}
+
+.race-card .card-icon svg {
+    color: var(--rotary-sky-blue);
+}
+
+.event-card:hover .card-icon svg {
+    transform: scale(1.1);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--rotary-royal-blue);
+    margin-bottom: 1.5rem;
+}
+
+.event-date {
+    font-size: 1.25rem;
+    color: var(--rotary-royal-blue);
+    margin-bottom: 0.5rem;
+}
+
+.event-day {
+    font-size: 1rem;
+    color: var(--rotary-charcoal);
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.event-time, .event-location {
+    font-size: 1.1rem;
+    color: var(--rotary-charcoal);
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.event-address {
+    font-size: 0.95rem;
+    color: var(--rotary-slate);
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.event-note {
+    font-size: 0.95rem;
+    color: var(--rotary-sky-blue);
+    margin-bottom: 0;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.kit-card {
+    border-left: 4px solid var(--rotary-gold);
+}
+
+.race-card {
+    border-left: 4px solid var(--rotary-sky-blue);
+}
+
+/* Event Info Responsive Design */
+@media (max-width: 768px) {
+    .event-info {
+        padding: 3rem 0;
+    }
+
+    .event-info-container {
+        padding: 0 1.5rem;
+    }
+
+    .event-info-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .event-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .event-card {
+        padding: 1.5rem;
+    }
+
+    .card-icon {
+        font-size: 2.5rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-info {
+        padding: 2rem 0;
+    }
+
+    .event-info-container {
+        padding: 0 1rem;
+    }
+
+    .event-info-title {
+        font-size: 1.5rem;
+    }
+
+    .event-card {
+        padding: 1.25rem;
+    }
+
+    .card-icon {
+        font-size: 2rem;
+    }
+
+    .event-date {
+        font-size: 1.1rem;
+    }
+
+    .event-time, .event-location {
+        font-size: 1rem;
     }
 }
 
@@ -426,7 +607,7 @@
 }
 
 .gallery-container {
-    max-width: 1200px;
+    max-width: 96rem;
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -445,7 +626,7 @@
 
 .carousel-cell {
     width: 80%;
-    height: 400px;
+    height: 600px;
     margin-right: 10px;
     border-radius: 8px;
     overflow: hidden;
@@ -475,7 +656,7 @@
     }
 
     .gallery-title {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-bottom: 2rem;
     }
 
@@ -493,5 +674,111 @@
     .carousel-cell {
         width: 95%;
         height: 250px;
+    }
+}
+
+/* CTA Section */
+.cta {
+    background: linear-gradient(135deg,
+            var(--rotary-royal-blue) 0%,
+            var(--rotary-sky-blue) 100%);
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.cta-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--rotary-white);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cta-description {
+    font-size: 1.25rem;
+    color: var(--rotary-white);
+    margin-bottom: 2.5rem;
+    line-height: 1.5;
+    opacity: 0.95;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--rotary-white);
+    color: var(--rotary-royal-blue);
+    padding: 1rem 3rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2rem;
+    border: 3px solid var(--rotary-white);
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background: transparent;
+    color: var(--rotary-white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* CTA Responsive Design */
+@media (max-width: 768px) {
+    .cta {
+        padding: 4rem 0;
+    }
+
+    .cta-container {
+        padding: 0 1.5rem;
+    }
+
+    .cta-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta-description {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .cta-button {
+        padding: 0.875rem 2.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta {
+        padding: 3rem 0;
+    }
+
+    .cta-container {
+        padding: 0 1rem;
+    }
+
+    .cta-title {
+        font-size: 1.875rem;
+        line-height: 1.2;
+    }
+
+    .cta-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 0.75rem 2rem;
+        font-size: 0.9rem;
     }
 }

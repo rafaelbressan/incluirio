@@ -51,6 +51,7 @@ html {
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
+    scroll-behavior: smooth;
 }
 
 body {

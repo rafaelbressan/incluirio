@@ -32,6 +32,20 @@
     text-decoration: underline;
 }
 
+.footer-logo {
+    display: block;
+    margin: 3rem auto;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.footer-logo img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
 .copyright {
     font-size: 0.75rem;
     color: var(--rotary-slate);
@@ -44,5 +58,17 @@
         flex-direction: column;
         gap: 1rem;
         align-items: center;
+    }
+
+    .footer-logo img {
+        content: url('/assets/pessoasemacao-vertical.png');
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo img {
+        content: url('/assets/pessoasemacao-vertical.png');
+        height: 80px;
     }
 }

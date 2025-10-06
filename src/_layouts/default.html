@@ -18,7 +18,7 @@
     {% include 'meta/structured-data.html' %}
 </head>
 
-<body>
+<body id="top">
     <!-- SVG Icon Library -->
     <svg width="0" height="0" aria-hidden="true" style="position: absolute;">
         <defs>
@@ -45,16 +45,23 @@
     <script>
         // Initialize Flickity carousel when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            var elem = document.querySelector('.carousel');
-            if (elem) {
-                var flkty = new Flickity(elem, {
-                    wrapAround: true,
-                    autoPlay: 3000,
-                    pauseAutoPlayOnHover: false,
-                    cellAlign: 'center',
-                    contain: true
-                });
-            }
+            // Wait a bit for styles to load
+            setTimeout(function() {
+                var elem = document.querySelector('.carousel');
+                console.log('Carousel element found:', elem);
+                if (elem) {
+                    var flkty = new Flickity(elem, {
+                        wrapAround: true,
+                        autoPlay: 3000,
+                        pauseAutoPlayOnHover: false,
+                        cellAlign: 'center',
+                        contain: true
+                    });
+                    console.log('Flickity initialized:', flkty);
+                } else {
+                    console.log('Carousel element not found');
+                }
+            }, 100);
         });
     </script>
 
